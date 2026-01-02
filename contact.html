@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | TiffinBox</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+
+body{
+  background:#f4f6f8;
+  color:#333;
+}
+
+header{
+  background:#ff5722;
+  color:#fff;
+  padding:20px 60px;
+  justify-content:space-between;
+  align-items:center;
+  text-align: center;
+}
+
+header h1{font-size:26px}
+
+nav a{
+  color:#fff;
+  margin-left:20px;
+  text-decoration:none;
+}
+
+.contact-container{
+  max-width:1000px;
+  margin:60px auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+}
+
+.contact-info, .contact-form{
+  background:#fff;
+  padding:40px;
+  border-radius:20px;
+  box-shadow:0 15px 35px rgba(0,0,0,0.1);
+}
+
+.contact-info h2,
+.contact-form h2{
+  margin-bottom:25px;
+  color:#ff5722;
+}
+
+.contact-info p{
+  margin-bottom:15px;
+  font-size:15px;
+}
+
+.contact-form input,
+.contact-form textarea{
+  width:100%;
+  padding:14px;
+  margin-bottom:18px;
+  border-radius:10px;
+  border:1px solid #ccc;
+}
+
+.contact-form textarea{
+  resize:none;
+  height:120px;
+}
+
+.contact-form button{
+  width:100%;
+  padding:14px;
+  background:#ff5722;
+  color:#fff;
+  border:none;
+  border-radius:30px;
+  font-size:16px;
+  cursor:pointer;
+}
+
+.contact-form button:hover{
+  background:#e64a19;
+}
+
+footer{
+  background:#222;
+  color:#fff;
+  text-align:center;
+  padding:25px;
+  margin-top:60px;
+}
+
+@media(max-width:768px){
+  .contact-container{
+    grid-template-columns:1fr;
+    margin:40px 20px;
+  }
+}
+    /* ===== FOOTER ===== */
+.footer {
+  background: linear-gradient(135deg, #1b0f0a, #000);
+  color: #ffffff;
+  padding: 50px 20px 20px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+}
+
+.footer-box h2,
+.footer-box h3 {
+  margin-bottom: 15px;
+  color: #ff7043;
+}
+
+.footer-box p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #dcdcdc;
+}
+
+.footer-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-box ul li {
+  margin-bottom: 10px;
+}
+
+.footer-box ul li a {
+  color: #cccccc;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.footer-box ul li a:hover {
+  color: #ff7043;
+}
+
+/* ===== SOCIAL ICONS ===== */
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background: #2a2a2a;
+  color: #ffffff;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  background: #ff7043;
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+/* ===== FOOTER BOTTOM ===== */
+.footer-bottom {
+  margin-top: 30px;
+  padding-top: 15px;
+  text-align: center;
+  border-top: 1px solid #444;
+  font-size: 14px;
+  color: #aaaaaa;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>TiffinBox</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="index.html#menu">Menu</a>
+    <a href="index.html#services">Services</a>
+    <a href="about.html">About</a>
+    <a href="signup.html">signup</a>
+  </nav>
+</header>
+
+<div class="contact-container">
+
+  <div class="contact-info">
+    <h2>Get in Touch</h2>
+    <p><strong>📍 Address:</strong>Haridwar, India</p>
+    <p><strong>📞 Phone:</strong> +91 8392846480</p>
+    <p><strong>📧 Email:</strong> support@tiffinbox.com</p>
+    <p>
+      We provide fresh, hygienic and home-made food delivery for
+      students, working professionals and families.
+    </p>
+  </div>
+
+  <div class="contact-form">
+    <h2>Send Message</h2>
+    <input type="text" placeholder="Your Name">
+    <input type="email" placeholder="Your Email">
+    <textarea placeholder="Your Message"></textarea>
+    <button>Send Message</button>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-box">
+      <h2>Tiffin Service</h2>
+      <p>
+        Fresh, hygienic home-made food delivered daily for students,
+        office workers and families.
+      </p>
+    </div>
+
+    <div class="footer-box">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="how-it-works.html">How it Works</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-box">
+      <h3>Legal</h3>
+      <ul>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-box">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Tiffin Service | All Rights Reserved
+  </div>
+</footer>
+
+</body>
+</html>

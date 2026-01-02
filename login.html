@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login | TiffinBox</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+    background:#f4f6f8;
+}
+
+.auth-box{
+    background-color: #ffffff;
+  box-shadow:0 15px 35px rgba(0,0,0,0.12);
+  height: 500px;
+  width:380px;
+  padding:40px;
+  padding-top: 70px;
+  border-radius:20px;
+  box-shadow:0 20px 40px rgba(0,0,0,.2);
+}
+
+.auth-box h2{
+  text-align:center;
+  margin-bottom:25px;
+  color:#ff5722;
+}
+
+.auth-box input{
+  width:100%;
+  padding:14px;
+  margin-bottom:20px;
+  border-radius:10px;
+  border:1px solid #ccc;
+}
+
+.auth-box button{
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:30px;
+  background:#ff5722;
+  color:#fff;
+  font-size:16px;
+  cursor:pointer;
+}
+
+.auth-box button:hover{background:#e64a19}
+
+.auth-box p{
+  text-align:center;
+  margin-top:20px;
+  font-size:14px;
+}
+
+.auth-box a{
+  color:#ff5722;
+  text-decoration:none;
+  font-weight:600;
+}
+</style>
+</head>
+
+<body>
+
+<div class="auth-box">
+  <h2>Login</h2>
+  <input type="email" placeholder="Email">
+  <input type="password" placeholder="Password">
+  <button>Login</button>
+  <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+</div>
+
+</body>
+</html>
