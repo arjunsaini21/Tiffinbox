@@ -70,13 +70,48 @@ body{
 
 <div class="auth-box">
   <h2>Create Account</h2>
-  <input type="text" placeholder="Full Name">
-  <input type="email" placeholder="Email">
-  <input type="password" placeholder="Password">
-  <input type="password" placeholder="Confirm Password">
-  <button>Sign Up</button>
+ <input type="text" placeholder="Full Name" id="name">
+
+<input type="email" placeholder="Email" id="email">
+
+<input type="password" placeholder="Password" id="password">
+
+<input type="password" placeholder="Confirm Password" id="confirmPassword">
+
+ 
+ <button onclick="signup()">Signup</button>
   <p>Already have an account? <a href="login.html">Login</a></p>
 </div>
+<script>
+function signup() {
+
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  fetch("http://localhost:8080/api/auth/signup", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      name: name,
+      email: email,
+      password: password
+    })
+  })
+  .then(response => response.json())
+  .then(data => {
+    alert("Signup Successful");
+    console.log(data);
+    // optional: window.location.href = "login.html";
+  })
+  .catch(error => {
+    alert("Signup Failed");
+  });
+}
+</script>
 
 </body>
 </html>
+
