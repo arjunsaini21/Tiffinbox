@@ -73,11 +73,47 @@ body{
 
 <div class="auth-box">
   <h2>Login</h2>
-  <input type="email" placeholder="Email">
-  <input type="password" placeholder="Password">
-  <button>Login</button>
+ <input type="email" placeholder="Email" id="email">
+
+<input type="password" placeholder="Password" id="password">
+ <button onclick="login()">Login</button>
   <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
 </div>
+<script>
+function login() {
 
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  fetch("http://localhost:8080/api/auth/login", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      email: email,
+      password: password
+    })
+  })
+  .then(response => {
+    if (!response.ok) {
+      throw new Error("Invalid login");
+    }
+    return response.json();
+  })
+  .then(data => {
+    alert("Login Successful 🎉");
+
+    localStorage.setItem("user", JSON.stringify(data));
+
+    // 👉 redirect
+    window.location.href = "index.html";
+  })
+  .catch(error => {
+    alert("Invalid Email or Password ❌");
+  });
+}
+</script>
 </body>
 </html>
+
